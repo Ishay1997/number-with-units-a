@@ -32,12 +32,12 @@ namespace ariel
 
         //////////
 
-        friend bool operator>(const NumberWithUnits &a, const NumberWithUnits &b);
-        friend bool operator>=(const NumberWithUnits &a, const NumberWithUnits &b);
-        friend bool operator<(const NumberWithUnits &a, const NumberWithUnits &b);
-        friend bool operator<=(const NumberWithUnits &a, const NumberWithUnits &b);
-        friend bool operator==(const NumberWithUnits &a, const NumberWithUnits &b);
-        friend bool operator!=(const NumberWithUnits &a, const NumberWithUnits &b);
+        bool operator>(const NumberWithUnits &a)const;
+        bool operator>=(const NumberWithUnits &a)const;
+        bool operator<(const NumberWithUnits &a)const;
+        bool operator<=(const NumberWithUnits &a)const;
+        bool operator==(const NumberWithUnits &a)const;
+        bool operator!=(const NumberWithUnits &a)const;
 
         //////////
 

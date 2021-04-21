@@ -38,6 +38,15 @@ namespace ariel
     }
 
     //////////
+    
+     bool NumberWithUnits::operator==(const NumberWithUnits &a)const
+    {
+        return true;
+    }
+    bool NumberWithUnits::operator!=(const NumberWithUnits &a)const
+    {
+        return true;
+    }
 
     bool NumberWithUnits::operator>(const NumberWithUnits &a) const 
     {
@@ -55,15 +64,7 @@ namespace ariel
     {
         return true;
     }
-    bool NumberWithUnits::operator==(const NumberWithUnits &a)const
-    {
-        return true;
-    }
-    bool NumberWithUnits::operator!=(const NumberWithUnits &a)const
-    {
-        return true;
-    }
-
+   
     //////////
 
     NumberWithUnits &operator++(NumberWithUnits &a) 

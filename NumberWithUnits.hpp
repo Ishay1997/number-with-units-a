@@ -23,8 +23,8 @@ namespace ariel
         static void read_units(std::ifstream &units_file);
 
 
-        friend NumberWithUnits &operator+=(NumberWithUnits &a, const NumberWithUnits &b);
-        friend NumberWithUnits &operator-=(NumberWithUnits &a, const NumberWithUnits &b);
+        NumberWithUnits &operator+=(const NumberWithUnits &a);
+        NumberWithUnits &operator-=(const NumberWithUnits &a);
         friend NumberWithUnits operator+(const NumberWithUnits &a, const NumberWithUnits &b);
         friend NumberWithUnits operator-(const NumberWithUnits &a, const NumberWithUnits &b);
         friend NumberWithUnits &operator+(NumberWithUnits &a); 
@@ -50,7 +50,7 @@ namespace ariel
 
         friend NumberWithUnits operator*(const NumberWithUnits &a, const double b);
         friend NumberWithUnits operator*(const double b, const NumberWithUnits &a);
-        friend NumberWithUnits operator*=(NumberWithUnits &a, double b);
+        NumberWithUnits &operator*=(const double b);
 
         ////////////
 

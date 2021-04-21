@@ -39,27 +39,27 @@ namespace ariel
 
     //////////
 
-    bool operator>(const NumberWithUnits &a, const NumberWithUnits &b) 
+    bool NumberWithUnits::operator>(const NumberWithUnits &a) const 
     {
         return true;
     }
-    bool operator>=(const NumberWithUnits &a, const NumberWithUnits &b)
+    bool NumberWithUnits::operator>=(const NumberWithUnits &a)const
     {
         return true;
     }
-    bool operator<(const NumberWithUnits &a, const NumberWithUnits &b)
+    bool NumberWithUnits::operator<(const NumberWithUnits &a) const
     {
         return true;
     }
-    bool operator<=(const NumberWithUnits &a, const NumberWithUnits &b)
+    bool NumberWithUnits::operator<=(const NumberWithUnits &a)const
     {
         return true;
     }
-    bool operator==(const NumberWithUnits &a, const NumberWithUnits &b)
+    bool NumberWithUnits::operator==(const NumberWithUnits &a)const
     {
         return true;
     }
-    bool operator!=(const NumberWithUnits &a, const NumberWithUnits &b)
+    bool NumberWithUnits::operator!=(const NumberWithUnits &a)const
     {
         return true;
     }

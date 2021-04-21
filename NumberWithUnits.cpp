@@ -10,13 +10,7 @@ namespace ariel
     {
     }
 
-    // double NumberWithUnits::getValue(NumberWithUnits& n1){
-    //     return n1.number;
-    // }
 
-    // string NumberWithUnits::getmUnits(NumberWithUnits& n1){
-    //     return n1.unit;
-    // }
 
     NumberWithUnits &operator+=(NumberWithUnits &a, const NumberWithUnits &b)
     {
@@ -46,7 +40,7 @@ namespace ariel
 
     //////////
 
-    bool operator>(const NumberWithUnits &a, const NumberWithUnits &b) //maybe do this here
+    bool operator>(const NumberWithUnits &a, const NumberWithUnits &b) 
     {
         return true;
     }
@@ -73,19 +67,19 @@ namespace ariel
 
     //////////
 
-    NumberWithUnits &operator++(NumberWithUnits &a) //prefix
+    NumberWithUnits &operator++(NumberWithUnits &a) 
     {
         return a;
     }
-    NumberWithUnits operator++(NumberWithUnits &a, int) //postfix
+    NumberWithUnits operator++(NumberWithUnits &a, int) 
     {
         return a;
     }
-    NumberWithUnits &operator--(NumberWithUnits &a) //prefix
+    NumberWithUnits &operator--(NumberWithUnits &a) 
     {
         return a;
     }
-    NumberWithUnits operator--(NumberWithUnits &a, int) //postfix
+    NumberWithUnits operator--(NumberWithUnits &a, int) 
     {
         return a;
     }

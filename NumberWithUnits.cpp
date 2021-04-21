@@ -12,13 +12,13 @@ namespace ariel
 
 
 
-    NumberWithUnits &operator+=(NumberWithUnits &a, const NumberWithUnits &b)
+    NumberWithUnits &NumberWithUnits::operator+=(const NumberWithUnits &b)
     {
-        return a;
+        return *this;
     }
-    NumberWithUnits &operator-=(NumberWithUnits &a, const NumberWithUnits &b)
+    NumberWithUnits &NumberWithUnits::operator-=(const NumberWithUnits &b)
     {
-        return a;
+        return *this;
     }
     NumberWithUnits operator+(const NumberWithUnits &a, const NumberWithUnits &b)
     {
@@ -94,9 +94,9 @@ namespace ariel
     {
         return a;
     }
-    NumberWithUnits operator*=(NumberWithUnits &a, double b)
+     NumberWithUnits &NumberWithUnits::operator*=(NumberWithUnits &a, double b)
     {
-        return a;
+        return *this;
     }
 
     ////////////

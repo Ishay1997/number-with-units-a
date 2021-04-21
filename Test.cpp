@@ -1,6 +1,5 @@
 #include "NumberWithUnits.hpp"
 #include "doctest.h"
-//#include <algorithm>
 #include <string>
 #include <fstream>
 
@@ -61,11 +60,6 @@ TEST_CASE("minos")
     CHECK_EQ(min1 - 0.5 * sec60, 0.5 * sec60);
     CHECK_EQ(min1 - 0.5 * sec60, 0.5 * min1);
 }
-// TEST_CASE("plus onari"){
-// NumberWithUnits::read_units(units_file);
-//     CHECK_EQ(+(USDminos1),USD1);
-//     CHECK_EQ(+ILSminos3_3,ILS3_3);
-// }
 TEST_CASE("minos onari")
 {
     NumberWithUnits::read_units(units_file);
@@ -96,148 +90,4 @@ TEST_CASE("not equal")
     CHECK_NE(km1, 1200 * m1);
 }
 
-//  TEST_CASE("exception"){
-//      CHECK_THROWS(USD1==m1000);
-//      CHECK_THROWS(km1==min1);
-//      CHECK_THROWS(kg1==sec60);
-//      CHECK_THROWS(ILS3_3==min1);
-//  }
-// #include "doctest.h"
-// #include <algorithm>
-// #include <string>
-// #include <fstream>
-// #include "NumberWithUnits.hpp"
 
-// using namespace std;
-// using namespace ariel;
-
-// /**
-//  * This class represents the test file for the initial part of the task.
-//  *
-//  * @author Liav Weiss
-//  */
-
-// ifstream units_file{"units.txt"};
-
-// TEST_CASE("Test the operators: (1)+ (2)+= (3)+ (4)- (5)-= (6)- "){
-//     NumberWithUnits::read_units(units_file);
-
-//     NumberWithUnits n1{2, "ton"};
-//     NumberWithUnits n2{1, "kg"};
-//     NumberWithUnits n3{3, "g"};
-
-//     // +
-//     CHECK(n1 + n2 == NumberWithUnits {2.001, "ton"});
-//     CHECK(n2 + n1 == NumberWithUnits {2001, "kg"});
-//     CHECK(n1 + n3 == NumberWithUnits {2.000003, "ton"});
-//     CHECK(n3 + n1 == NumberWithUnits {2000003, "g"});
-
-//     // + (unary)
-//     CHECK(n1 == NumberWithUnits {2, "ton"});
-//     CHECK(n2 == NumberWithUnits {1, "kg"});
-//     CHECK(n3 == NumberWithUnits {3, "g"});
-
-//     // +=
-//     CHECK((n1 += NumberWithUnits {1, "ton"}) == NumberWithUnits {3, "ton"});
-//     CHECK((n2 += NumberWithUnits {1, "kg"}) == NumberWithUnits {2, "kg"});
-//     CHECK((n1 += NumberWithUnits {1, "g"}) == NumberWithUnits {4, "g"});
-
-//     // -=
-//     CHECK((n1 -= NumberWithUnits {1, "ton"}) == NumberWithUnits {2, "ton"});
-//     CHECK((n1 -= NumberWithUnits {1, "kg"}) == NumberWithUnits {1, "kg"});
-//     CHECK((n1 -= NumberWithUnits {1, "g"}) == NumberWithUnits {3, "g"});
-
-//     // -
-//     CHECK(n1-n2 == NumberWithUnits {1.999, "ton"});
-//     CHECK(n2-n1 == NumberWithUnits {1999, "kg"});
-//     CHECK(n1-n3 == NumberWithUnits {1.000097, "ton"});
-//     CHECK(n3-n1 == NumberWithUnits {1000097, "g"});
-
-//     // - (unary)
-//     CHECK(-n1 == NumberWithUnits {-2, "ton"});
-//     CHECK(-n2 == NumberWithUnits {-1, "kg"});
-//     CHECK(-n3 == NumberWithUnits {-3, "g"});
-
-// }
-
-// TEST_CASE("Test the operators: (1)> (2)>= (3)< (4)<= (5)== (6)!= "){
-//     NumberWithUnits::read_units(units_file);
-
-//     NumberWithUnits n1{1, "ton"};
-//     NumberWithUnits n2{1, "kg"};
-//     NumberWithUnits n3{1, "g"};
-
-//     // >
-//     CHECK(n1 > n3);
-//     CHECK(n1 > n2);
-//     CHECK(n2 > n3);
-
-//     // >=
-//     CHECK(n1 >= NumberWithUnits {1000, "kg"});
-//     CHECK(n1 >= NumberWithUnits {1000000, "g"});
-//     CHECK(n2 >= NumberWithUnits {1000, "g"});
-
-//     // <
-//     CHECK(n3 < n1);
-//     CHECK(n3 < n2);
-//     CHECK(n2 < n1);
-
-//     // <=
-//     CHECK(n2 <= NumberWithUnits {0.001, "ton"});
-//     CHECK(n3 <= NumberWithUnits {0.000001, "ton"});
-//     CHECK(n3 <= NumberWithUnits {0.001, "kg"});
-
-//     // ==
-//     CHECK(n1 == NumberWithUnits {1, "ton"});
-//     CHECK(n1 == NumberWithUnits {1000, "kg"});
-//     CHECK(n1 == NumberWithUnits {1000000, "g"});
-//     CHECK(n2 == NumberWithUnits {0.001, "ton"});
-//     CHECK(n2 == NumberWithUnits {1, "kg"});
-//     CHECK(n2 == NumberWithUnits {1000, "g"});
-//     CHECK(n3 <= NumberWithUnits {1, "g"});
-//     CHECK(n3 <= NumberWithUnits {0.001, "kg"});
-//     CHECK(n3 <= NumberWithUnits {0.000001, "ton"});
-
-//     // !=
-//     CHECK(n1 != NumberWithUnits {1, "kg"});
-//     CHECK(n2 != NumberWithUnits {1, "g"});
-//     CHECK(n3 != NumberWithUnits {1, "ton"});
-
-// }
-
-// TEST_CASE("Test the operators: (1)++(after). (2)++(before). (3)--(after). (4)(before)-- "){
-//     NumberWithUnits::read_units(units_file);
-
-//     NumberWithUnits n1{1, "ton"};
-
-//     CHECK(n1++ == NumberWithUnits {1, "ton"});
-//     CHECK(n1 == NumberWithUnits {2, "ton"});
-//     CHECK(++n1 == NumberWithUnits {3, "ton"});
-//     CHECK(n1++ == NumberWithUnits {3, "ton"});
-//     CHECK(n1-- == NumberWithUnits {4, "ton"});
-//     CHECK(--n1 == NumberWithUnits {2, "ton"});
-//     CHECK(--n1 == NumberWithUnits {1, "ton"});
-
-// }
-
-// TEST_CASE("Test the operators: (1)* (2)* (3)*= (4)*= "){
-//     NumberWithUnits::read_units(units_file);
-
-//     NumberWithUnits n1{1, "ton"};
-
-//     CHECK(n1*2 == NumberWithUnits {2, "ton"});
-//     CHECK(2*n1 == NumberWithUnits {4, "ton"});
-//     CHECK((n1*=2) == NumberWithUnits {8, "ton"});
-
-// }
-
-// TEST_CASE("Test the operators: (1)<<(cout) (2)>>(cin)"){
-//     NumberWithUnits::read_units(units_file);
-
-//     NumberWithUnits n1{1, "ton"};
-
-//     CHECK(n1*2 == NumberWithUnits {2, "ton"});
-//     CHECK(2*n1 == NumberWithUnits {4,"ton"});
-//     CHECK((n1*=2) == NumberWithUnits {8, "ton"});
-
-// }

@@ -50,7 +50,7 @@ namespace ariel
 
         friend NumberWithUnits operator*(const NumberWithUnits &a, const double b);
         friend NumberWithUnits operator*(const double b, const NumberWithUnits &a);
-        NumberWithUnits &operator*=(const double b);
+        NumberWithUnits &operator*=(const double &b);
 
         ////////////
 

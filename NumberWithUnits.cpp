@@ -94,7 +94,7 @@ namespace ariel
     {
         return a;
     }
-     NumberWithUnits &NumberWithUnits::operator*=(NumberWithUnits &a, double b)
+     NumberWithUnits &NumberWithUnits::operator*=(NumberWithUnits &a)
     {
         return *this;
     }

@@ -36,7 +36,7 @@ TEST_CASE("equal")
     CHECK_EQ(USD1, ILS3_3);
     CHECK_EQ(kg1, g1000);
 }
-TEST_CASE("cafel")
+TEST_CASE("mult")
 {
     NumberWithUnits::read_units(units_file);
     CHECK_EQ(km1, 1000 * m1);
@@ -52,7 +52,7 @@ TEST_CASE("plus")
     CHECK_EQ(min1 + 0.5 * sec60, 1.5 * sec60);
     CHECK_EQ(min1 + 0.5 * sec60, 1.5 * min1);
 }
-TEST_CASE("minos")
+TEST_CASE("minus")
 {
     NumberWithUnits::read_units(units_file);
     CHECK_EQ(hour1 - hour0_5, 30 * min1);
@@ -60,7 +60,7 @@ TEST_CASE("minos")
     CHECK_EQ(min1 - 0.5 * sec60, 0.5 * sec60);
     CHECK_EQ(min1 - 0.5 * sec60, 0.5 * min1);
 }
-TEST_CASE("minos onari")
+TEST_CASE("minus onari")
 {
     NumberWithUnits::read_units(units_file);
     CHECK_EQ(USDminos1, -USD1);

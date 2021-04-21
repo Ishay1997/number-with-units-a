@@ -31,13 +31,13 @@ namespace ariel
         friend NumberWithUnits &operator-(NumberWithUnits &a);
 
         //////////
-
+        bool operator==(const NumberWithUnits &a)const;
+        bool operator!=(const NumberWithUnits &a)const;
         bool operator>(const NumberWithUnits &a)const;
         bool operator>=(const NumberWithUnits &a)const;
         bool operator<(const NumberWithUnits &a)const;
         bool operator<=(const NumberWithUnits &a)const;
-        bool operator==(const NumberWithUnits &a)const;
-        bool operator!=(const NumberWithUnits &a)const;
+       
 
         //////////
 

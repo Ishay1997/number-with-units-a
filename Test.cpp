@@ -80,7 +80,7 @@ TEST_CASE("right bigger")
     CHECK_GT(km1, 1200 * m1);
     CHECK_GT(km1, m1000 + 5 * cm1);
 }
-TEST_CASE("not equal")
+TEST_CASE("worthless")
 {
     NumberWithUnits::read_units(units_file);
     CHECK_NE(km1, m1);

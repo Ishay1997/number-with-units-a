@@ -18,7 +18,6 @@ namespace ariel
     }
     NumberWithUnits &operator-=(NumberWithUnits &a, const NumberWithUnits &b)
     {
-        //return NumberWithUnits{2,"ton"};
         return a;
     }
     NumberWithUnits operator+(const NumberWithUnits &a, const NumberWithUnits &b)
